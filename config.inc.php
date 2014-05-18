@@ -1,12 +1,16 @@
-<?php 
+<?php
 
 	// --------------------------------- general stuff
-	
-	// (de)activate authentification
-	$authState = false;	// false0 = off | true = on
-	// (de)activate google analytics
-	$gAnaState = false;	// false0 = off | true = on
 
+	// (de)activate authentification
+	// false0 = off | true = on
+	$authState = false;
+
+	// (de)activate google analytics
+	// false0 = off | true = on
+	$gAnaState = false;
+
+	define('DS',DIRECTORY_SEPARATOR);
 	// --------------------------------- db conenction
 	$host 	= '';
 	$dbUser = '';
@@ -19,4 +23,18 @@
 	define('_siteContact', 'Email');
 	define('_siteInstitution', 'Einrichtung');
 
+	// --------------------------------- route settings
+	$routeBase = 'include'.DS.'content';
+	$routeEnd  = '.php';
+
+	$routes = array(
+			'' 		=> 'welcome', // do not remove this one
+			'sth' 	=>'sth',
+		);
+
+	// --------------------------------- messages
+	$messages = array(
+			'siteNotExist'  => 'the site you are looking for does not exist',
+			'routeNotExist' => 'the route you look for does not exist',
+		);
  ?>

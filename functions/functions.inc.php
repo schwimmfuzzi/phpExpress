@@ -19,6 +19,18 @@
         return sha1(base64_encode($code));
   }
 
+
+  function setMessage($type, $content)
+  {
+    $htmlContent = '
+    <div class="alert alert-%s alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <p>%s</p>
+    </div>';
+
+    $_SESSION['message'] = sprintf($htmlContent, $type, $content);
+  }
+
   function is_url_exist($url)
   {
     // taken from
@@ -103,16 +115,7 @@ function getFirstKey($array)
   reset($array);
   return key($array);
 }
-/*
-    sorting graphData
- */
-function graphData($a, $b)
-{
-    if ($a['x'] == $b['x']) {
-        return 0;
-    }
-    return ($a['x'] < $b['x']) ? -1 : 1;
-}
+
 
 function setLastAction($dbConn, $userId){
   $now = time();
