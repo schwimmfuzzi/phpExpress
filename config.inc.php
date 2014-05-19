@@ -10,6 +10,10 @@
 	// false0 = off | true = on
 	$gAnaState = false;
 
+	// (de)activate navbar
+	// false0 = off | true = on
+	$navbarState = true;
+
 	define('DS',DIRECTORY_SEPARATOR);
 	// --------------------------------- db conenction
 	$host 	= '';

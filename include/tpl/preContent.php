@@ -1,4 +1,4 @@
-<!-- Fixed navbar -->
+<?php if($navbarState){ ?><!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
      <div class="container">
           <div class="navbar-header">
@@ -45,6 +45,6 @@
           </div><!--/.nav-collapse -->
      </div>
 </div>
-
+<?php } ?>
 <!-- opening the container for content -->
 <div id="content" class="container">
