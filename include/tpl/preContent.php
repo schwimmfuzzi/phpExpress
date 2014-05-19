@@ -11,24 +11,32 @@
           </div>
           <div class="navbar-collapse collapse">
                <ul class="nav navbar-nav">
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><!-- <i class="fa fa-globe"></i> --> First Nav <b class="caret"></b></a>
-                         <ul class="dropdown-menu">
-                              <li><a href="index.php?open=">Link</a></li>
-                              <li class="divider"></li>
-                              <li><a href="index.php?open=">Link2</a></li>
-                         </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><!-- <i class="fa fa-signal"></i> --> 2nd Nav <b class="caret"></b></a>
-                         <ul class="dropdown-menu">
-
-                              <li class="divider"></li>
-                              <li role="presentation" class="dropdown-header">header</li>
-
-                              <li class=""><a href="index.php?open=">sublink 1</a></li>
-                              <li><a href="index.php?open=">sublink 2</a></li>
-
-                         </ul>
-                    </li>
+                    <?php
+                         $urlBase = 'http://';
+                         foreach ($navLeft as $key => $n)
+                         {
+                              if(!array_key_exists('title', $n))
+                              {
+                                   echo '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><!-- <i class="fa fa-globe"></i> --> First Nav <b class="caret"></b></a>';
+                                   echo '<ul class="dropdown-menu">';
+                                   foreach ($n as $key => $link)
+                                   {
+                                        if ($link['active'] === 1)
+                                        {
+                                             echo '<li><a href="'.$urlBase.$link['href'].'" target="'.$link['target'].'">'.$link['title'].'</a></li>';
+                                        }
+                                   }
+                                   echo '</ul>';
+                                   echo '</li>';
+                              }
+                              else{
+                                   if ($n['active'] === 1)
+                                   {
+                                        echo '<li><a href="'.$urlBase.$n['href'].'" target="'.$link['target'].'">'.$n['title'].'</a></li>';
+                                   }
+                              }
+                         }
+                    ?>
 
                </ul>
                <ul class="nav navbar-nav navbar-right">
@@ -47,3 +55,8 @@
 <?php } ?>
 <!-- opening the container for content -->
 <div id="content" class="container">
+
+
+
+
+    

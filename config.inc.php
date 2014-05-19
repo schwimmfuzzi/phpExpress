@@ -2,6 +2,10 @@
 
 	// --------------------------------- general stuff
 
+	// salt for crrypting passwords
+	define('_salt','someSalt');
+	define('DS',DIRECTORY_SEPARATOR);
+
 	// (de)activate authentification
 	// false0 = off | true = on
 	$authState = false;
@@ -18,7 +22,6 @@
 	// false0 = off | true = on
 	$footerState = true;
 
-	define('DS',DIRECTORY_SEPARATOR);
 	// --------------------------------- db conenction
 	$host 	= '';
 	$dbUser = '';
@@ -38,6 +41,23 @@
 	$routes = array(
 			'' 		=> 'welcome', // do not remove this one
 			'sth' 	=>'sth',
+		);
+
+	// --------------------------------- navigation links
+
+	$navLeft = array(
+			// menu 1
+			0 => array(
+					0 => array('title' =>'1.1','href'=>'www.google.de','active'=>1,'target'=>'_blank'),
+					1 => array('title' =>'1.2','href'=>'www.google.de','active'=>1,'target'=>'_blank'),
+				),
+			// menu 2
+			1 => array(
+					0 => array('title' =>'2.1','href'=>'www.google.de','active'=>1,'target'=>'_blank'),
+					1 => array('title' =>'2.2','href'=>'www.google.de','active'=>0,'target'=>'_blank'),
+				),
+			2 => array('title' =>'simple','href'=>'www.google.de','active'=>1,'target'=>'_blank'),
+
 		);
 
 	// --------------------------------- messages
