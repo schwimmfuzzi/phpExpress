@@ -14,6 +14,10 @@
 	// false0 = off | true = on
 	$navbarState = true;
 
+	// (de)activate sticky footer
+	// false0 = off | true = on
+	$footerState = true;
+
 	define('DS',DIRECTORY_SEPARATOR);
 	// --------------------------------- db conenction
 	$host 	= '';

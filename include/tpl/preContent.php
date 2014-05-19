@@ -40,7 +40,6 @@
                          echo '<li class="active"><a href="#">Logged in as '.$_SESSION['username'].'</a>';
                     }
                     ?>
-                    </li>
                </ul>
           </div><!--/.nav-collapse -->
      </div>

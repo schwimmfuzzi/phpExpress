@@ -3,8 +3,8 @@
     </div><!--/.fluid-container-->
 <hr>
 
-      <footer>
-        <div class="text-center">
+      <div id="footer">
+        <div class="container text-center">
           <p>&copy; <?php echo _siteInstitution ?> - <?php echo _siteAuthor ?></p>
         <p> 
            Having problems displaying this site? Feel free to email 
@@ -19,4 +19,4 @@
         }
         ?>
         </div>
-      </footer>
+      </div>

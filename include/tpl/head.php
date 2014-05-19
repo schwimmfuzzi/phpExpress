@@ -22,6 +22,11 @@
           <!-- own styles -->
           <link href="css/own.css" rel="stylesheet">
 
+          <?php if ($footerState): ?>
+            <!-- sticky-footer styles -->
+            <link href="css/sticky-footer.css" rel="stylesheet">
+          <?php endif ?>
+
           <!-- stuff for jqueryUI -->
           <!-- <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"> -->
           <!--<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>-->
